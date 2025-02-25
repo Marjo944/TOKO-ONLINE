@@ -1,64 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Jul 27, 2020 at 07:16 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.2.32
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `dbpw192_18410100054`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
-  `username` varchar(200) NOT NULL,
-  `password` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'admin', '$2y$10$AIy0X1Ep6alaHDTofiChGeqq7k/d1Kc8vKQf1JZo0mKrzkkj6M626');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bom_produk`
---
-
-CREATE TABLE `bom_produk` (
-  `kode_bom` varchar(100) NOT NULL,
-  `kode_bk` varchar(100) NOT NULL,
-  `kode_produk` varchar(100) NOT NULL,
-  `nama_produk` varchar(200) NOT NULL,
-  `kebutuhan` varchar(200) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bom_produk`
---
-
-INSERT INTO `bom_produk` (`kode_bom`, `kode_bk`, `kode_produk`, `nama_produk`, `kebutuhan`) VALUES
 ('B0001', 'M0002', 'P0001', 'Roti Sobek', '2'),
 ('B0001', 'M0001', 'P0001', 'Roti Sobek', '4'),
 ('B0001', 'M0004', 'P0001', 'Roti Sobek', '3'),
@@ -111,15 +51,7 @@ CREATE TABLE `inventory` (
 --
 -- Dumping data for table `inventory`
 --
-
-INSERT INTO `inventory` (`kode_bk`, `nama`, `qty`, `satuan`, `harga`, `tanggal`) VALUES
-('M0001', 'Tepung', '76', 'Kg', 1000, '2020-07-26'),
-('M0002', 'Pengembang', '0', 'Kg', 1000, '2020-07-27'),
-('M0003', 'Cream', '17', 'Kg', 3000, '2020-07-26'),
-('M0004', 'Keju', '82', 'Kg', 4000, '2020-07-26'),
-('M0005', 'Coklat', '0', 'Kg', 5000, '2020-07-27');
-
--- --------------------------------------------------------
+ --------------------------------------------------------
 
 --
 -- Table structure for table `keranjang`
@@ -160,10 +92,7 @@ CREATE TABLE `produk` (
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`kode_produk`, `nama`, `image`, `deskripsi`, `harga`) VALUES
-('P0001', 'Roti Sobek', '5f1d915d27dc3.jpg', '																								Roti Enak Sobek Sobek aww\r\n																					', 10000),
-('P0002', 'Maryam', '5f1d9154715a4.jpg', '				Roti araym\r\n						', 15000),
-('P0003', 'Kue tart coklat', '5f1d924614831.jpg', 'Kuetar dengan varian rasa coklat enak dan lumer rasanya\r\n			', 100000);
+
 
 -- --------------------------------------------------------
 
